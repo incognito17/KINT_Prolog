@@ -9,7 +9,6 @@ compress([X, Y | InputTail], [X | OutputTail]) :-
 
 
 
-
 pack_list([], []) :- !.
 pack_list([X], [[X]]) :- \+is_list(X), !.
 pack_list([X], [X]) :- is_list(X), !.
@@ -27,7 +26,6 @@ pack_list([H1 | [H_InputTail | InputTail]], [[H1] | OutputTail]) :-
 pack_list([H1 | [H_InputTail | InputTail]], OutputTail) :- 
 	H1 \= H_InputTail, member(H_InputTail, H1), !, append(H1, [H_InputTail], Appended_List), 
 	pack_list([Appended_List | InputTail], OutputTail), !.
-
 
 
 

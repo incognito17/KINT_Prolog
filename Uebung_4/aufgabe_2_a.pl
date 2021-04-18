@@ -3,8 +3,10 @@ person(hans).
 person(klara).
 person(sabrina).
 person(kevin).
+
 /* Tiere */
 hund(fido).
+
 /* Geschlecht */
 weiblich(klara).
 weiblich(sabrina).
